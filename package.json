@@ -1,6 +1,6 @@
 {
   "name": "nodetunes",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "author": "Stephen Wan <stephen@stephenwan.net>",
   "description": "AirTunes v2 Server Implementation",
   "contributors": [
@@ -10,7 +10,7 @@
     }
   ],
   "engines": {
-    "node": "0.12.x"
+    "node": ">4.2.0"
   },
   "scripts": {
     "start": "node ./examples/server.js",
@@ -21,7 +21,6 @@
     "url": "https://github.com/stephen/nodetunes.git"
   },
   "dependencies": {
-    "alac2pcm": "^1.1.0",
     "debug": "^2.1.0",
     "forge": "^2.2.0",
     "httplike": "^1.0.2",
