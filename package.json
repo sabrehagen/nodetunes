@@ -28,7 +28,8 @@
     "node-forge": "*",
     "portastic": "*",
     "random-mac": "*",
-    "randomstring": "*"
+    "randomstring": "*",
+    "lodash": "*"
   },
   "devDependencies": {
     "speaker": "*",
