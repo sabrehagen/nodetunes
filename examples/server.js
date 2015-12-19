@@ -52,15 +52,14 @@ server.on('playbackStart',(args) => {
       avgBitRate: parseInt(audioOptions[10], 10),
       sampleRate: parseInt(audioOptions[11], 10)
     };
-    console.log("decoderOptions:",decoderOptions);
-
     g_decoder = new AlacDecoderStream(decoderOptions);
   }
   g_preBufferList = [];
   g_preBufferLength = 0;
 });
 
-server.on('audio',(audio,sequence_num,rtp_ts) => {
+server.on('audio',(data) => {
+  const audio = data.audio;
   let write = null;
   if (g_preBufferList) {
     write = (buf) => {
