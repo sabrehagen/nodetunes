@@ -33,7 +33,7 @@ const server_options = {
 };
 const server = new AirTunesServer(server_options);
 
-server.on('clientConnected',(args) => {
+server.on('playbackStart',(args) => {
   console.log("audioCodec:",args.audioCodec);
   g_codec = args.audioCodec;
 

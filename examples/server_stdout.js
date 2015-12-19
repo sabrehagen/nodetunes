@@ -5,7 +5,7 @@ var Speaker = require('speaker');
 
 var server = new AirTunesServer({ serverName: 'NodeTunes Stdout' });
 
-server.on('clientConnected', function(stream) {
+server.on('playbackStart', function(stream) {
   stream.pipe(process.stdout);
 });
 
